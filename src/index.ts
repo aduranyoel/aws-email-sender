@@ -15,7 +15,7 @@ export const handler: Handler = async (event: SQSEvent): Promise<APIGatewayProxy
       statusCode: 200,
     };
   } catch (error) {
-    console.error('ERROR:', error);
+    console.error('ERROR: sending mail: ', error);
     return {
       body: JSON.stringify({ error }),
       headers: {
